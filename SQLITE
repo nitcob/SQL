@@ -1,0 +1,174 @@
+nitcob@nitcob-Satellite-C55Dt-A:~$ sqlite3 Weather.db
+SQLite version 3.8.2 2013-12-06 14:53:30
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> CREATE TABLE weather( 'city' text, 'year' integer, 'warm_month' text, 'cold_month' text, 'average_high' integer);
+sqlite> INSERT INTO weather ( 'city', 'year', 'warm_month', 'cold_month', 'average_high')
+   ...> ('New York', '2013', 'July', 'January', '62')
+   ...> ...> ('Boston', '2013', 'July', 'January', '62')
+   ...>    ...> ('Chicago', '2013', 'July', 'January', '62')
+   ...>    ...> ('Miami', '2013', 'August', 'January', '62')
+   ...>    ...> ('Dallas', '2013', 'July', 'January', '62')
+   ...>    ...> ('Seattle', '2013', 'July', 'January', '62')
+   ...>    ...> ('Portland', '2013', 'July', 'December', '62')
+   ...>    ...> ('San Francisco', '2013', 'September', 'December', '62')
+   ...>    ...>^Z'Los Angeles', '2013', 'September', 'December', '62')
+[1]+  Stopped                 sqlite3 Weather.db
+nitcob@nitcob-Satellite-C55Dt-A:~$ sqlite3 Weather.db
+SQLite version 3.8.2 2013-12-06 14:53:30
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite>  INSERT INTO weather ( 'city', 'year', 'warm_month', 'cold_month', 'average_high')
+   ...>    ...> ('New York', '2013', 'July', 'January', '62')
+   ...>    ...> ('Boston', '2013', 'July', 'January', '62')
+   ...>    ...> ('Chicago', '2013', 'July', 'January', '62')
+   ...>    ...> ('Miami', '2013', 'August', 'January', '62')
+   ...>    ...> ('Dallas', '2013', 'July', 'January', '62')
+   ...>    ...> ('Seattle', '2013', 'July', 'January', '62')
+   ...>    ...> ('Portland', '2013', 'July', 'December', '62')
+   ...>    ...> ('San Francisco', '2013', 'September', 'December', '62')
+   ...>    ...>('Los Angeles', '2013', 'September', 'December', '62');
+Error: near ".": syntax error
+sqlite>  INSERT INTO weather ( 'city', 'year', 'warm_month', 'cold_month', 'average_high')
+   ...> ('New York', '2013', 'July', 'January', '62')
+   ...> ('Boston', '2013', 'July', 'January', '62')
+   ...> ('Chicago', '2013', 'July', 'January', '62')
+   ...> ('Miami', '2013', 'August', 'January', '62')
+   ...> ('Dallas', '2013', 'July', 'January', '62')
+   ...> ('Seattle', '2013', 'July', 'January', '62')
+   ...> ('Portland', '2013', 'July', 'December', '62')
+   ...> ('San Francisco', '2013', 'September', 'December', '62')
+sqlite> sqlite> INSERT INTO weather ( 'city', 'year', 'warm_month', 'cold_month', 'average_high') VALUES
+   ...> ('New York', '2013', 'July', 'January', '62')
+   ...> ('Boston', '2013', 'July', 'January', '62')
+   ...> ('Chicago', '2013', 'July', 'January', '62')
+   ...> ('Miami', '2013', 'August', 'January', '62')
+   ...> ('Dallas', '2013', 'July', 'January', '62')
+   ...> ('Seattle', '2013', 'July', 'January', '62')
+   ...> ('Portland', '2013', 'July', 'December', '62')
+   ...> ('San Francisco', '2013', 'September', 'December', '62')
+   ...> ('Los Angeles', '2013', 'September', 'December', '62');
+Error: near "sqlite": syntax error
+sqlite> ('Boston', '2013', 'July', 'January', '62')
+   ...> ('Chicago', '2013', 'July', 'January', '62')
+   ...> ('Miami', '2013', 'August', 'January', '62')
+   ...> ('Dallas', '2013', 'July', 'January', '62')
+   ...> ('Seattle', '2013', 'July', 'January', '62')
+   ...> ('Portland', '2013', 'July', 'December', '62')
+   ...> ('San Francisco', '2013', 'September', 'December', '62')
+sqlite> sqlite> INSERT INTO weather ( 'city', 'year', 'warm_month', 'cold_month', 'average_high') VALUES
+   ...>    ...> ('New York', '2013', 'July', 'January', '62')
+   ...>    ...> ('Boston', '2013', 'July', 'January', '62')
+   ...>    ...> ('Chicago', '2013', 'July', 'January', '62')
+   ...>    ...> ('Miami', '2013', 'August', 'January', '62')
+   ...>    ...> ('Dallas', '2013', 'July', 'January', '62')
+   ...>    ...> ('Seattle', '2013', 'July', 'January', '62')
+   ...>    ...> ('Portland', '2013', 'July', 'December', '62')
+   ...>    ...> ('San Francisco', '2013', 'September', 'December', '62')
+   ...>    ...>('Los Angeles', '2013', 'September', 'December', '62');
+Error: near "sqlite": syntax error
+sqlite> INSERT INTO weather ( 'city', 'year', 'warm_month', 'cold_month', 'average_high') VALUES
+   ...>    ...> ('New York', '2013', 'July', 'January', '62')
+   ...>    ...> ('Boston', '2013', 'July', 'January', '62')
+   ...>    ...> ('Chicago', '2013', 'July', 'January', '62')
+   ...>    ...> ('Miami', '2013', 'August', 'January', '62')
+   ...>    ...> ('Dallas', '2013', 'July', 'January', '62')
+   ...>    ...> ('Seattle', '2013', 'July', 'January', '62')
+   ...>    ...> ('Portland', '2013', 'July', 'December', '62')
+   ...>    ...> ('San Francisco', '2013', 'September', 'December', '62')
+   ...>    ...>('Los Angeles', '2013', 'September', 'December', '62');
+Error: near ".": syntax error
+sqlite> INSERT INTO weather ( 'city', 'year', 'warm_month', 'cold_month', 'average_high') VALUES ('New York', '2013', 'July', 'January', '62');
+sqlite> INSERT INTO weather ( 'city', 'year', 'warm_month', 'cold_month', 'average_high') VALUES ('Boston', '2013', 'July', 'January', '62');
+sqlite> INSERT INTO weather ( 'city', 'year', 'warm_month', 'cold_month', 'average_high') VALUES ('Chicago', '2013', 'July', 'January', '62');
+sqlite> INSERT INTO weather ( 'city', 'year', 'warm_month', 'cold_month', 'average_high') VALUES ('Miami', '2013', 'August', 'January', '62');
+sqlite> INSERT INTO weather ( 'city', 'year', 'warm_month', 'cold_month', 'average_high') VALUES ('Dallas', '2013', 'July', 'January', '62');
+sqlite> INSERT INTO weather ( 'city', 'year', 'warm_month', 'cold_month', 'average_high') VALUES ('Seattle', '2013', 'July', 'January', '62');
+sqlite> INSERT INTO weather ( 'city', 'year', 'warm_month', 'cold_month', 'average_high') VALUES ('Portland', '2013', 'July', 'December', '62');
+sqlite> INSERT INTO weather ( 'city', 'year', 'warm_month', 'cold_month', 'average_high') VALUES ('San Francisco', '2013', 'September', 'December', '62');
+sqlite> INSERT INTO weather ( 'city', 'year', 'warm_month', 'cold_month', 'average_high') VALUES ('Los Angeles', '2013', 'September', 'December', '62');
+sqlite> .tables
+weather
+sqlite> .schema
+CREATE TABLE weather( 'city' text, 'year' integer, 'warm_month' text, 'cold_month' text, 'average_high' integer);
+sqlite> CREATE TABLE cities (name text, state text);
+sqlite> INSERT INTO cities (name, state) VALUES
+   ...>     ('New York City', 'NY'),
+   ...>     ('Boston', 'MA'),
+   ...>     ('Chicago', 'IL'),
+   ...>     ('Miami', 'FL'),
+   ...>     ('Dallas', 'TX'),
+   ...>     ('Seattle', 'WA'),
+   ...>     ('Portland', 'OR'),
+   ...>     ('San Francisco', 'CA'),
+   ...>     ('Los Angeles', 'CA');
+sqlite> .tables
+cities   weather
+sqlite> .schema
+CREATE TABLE weather( 'city' text, 'year' integer, 'warm_month' text, 'cold_month' text, 'average_high' integer);
+CREATE TABLE cities (name text, state text);
+sqlite> SELECT name FROM cities LIMIT 2 OFFSET 3;
+Miami
+Dallas
+sqlite> SELECT COUNT(*) FROM cities WHERE name LIKE 'San%' AND state='CA';
+1
+sqlite> SELECT * FROM weather;
+New York|2013|July|January|62
+Boston|2013|July|January|62
+Chicago|2013|July|January|62
+Miami|2013|August|January|62
+Dallas|2013|July|January|62
+Seattle|2013|July|January|62
+Portland|2013|July|December|62
+San Francisco|2013|September|December|62
+Los Angeles|2013|September|December|62
+sqlite> TABLE weather
+sqlite> .show weather
+sqlite> SELECT * FROM weather
+New York|2013|July|January|62
+Boston|2013|July|January|62
+Chicago|2013|July|January|62
+Miami|2013|August|January|62
+Dallas|2013|July|January|62
+Seattle|2013|July|January|62
+Portland|2013|July|December|62
+San Francisco|2013|September|December|62
+Los Angeles|2013|September|December|62
+sqlite> SELECT COUNT (*) FROM weather
+9
+sqlite> .headers on
+sqlite> SELECT * FROM weather
+city|year|warm_month|cold_month|average_high
+New York|2013|July|January|62
+Boston|2013|July|January|62
+Chicago|2013|July|January|62
+Miami|2013|August|January|62
+Dallas|2013|July|January|62
+Seattle|2013|July|January|62
+Portland|2013|July|December|62
+San Francisco|2013|September|December|62
+Los Angeles|2013|September|December|62
+sqlite> SELECT FROM weather WHERE warm_month=July
+   ...> ;
+Error: near "FROM": syntax error
+sqlite> SELECT weather WHERE warm_month=July
+   ...> ;
+sqlite> SELECT city, warm_month FROM weather WHERE warm_month;
+sqlite> SELECT city, warm_month FROM weather WHERE warm_month='July';
+city|warm_month
+New York|July
+Boston|July
+Chicago|July
+Dallas|July
+Seattle|July
+Portland|July
+sqlite> SELECT city, warm_month FROM weather WHERE warm_month='January';
+sqlite>
+sqlite> SELECT city, cold_month FROM weather WHERE cold_month='January';
+city|cold_month
+New York|January
+Boston|January
+Chicago|January
+Miami|January
+Dallas|January
+Seattle|January
